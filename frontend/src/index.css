@@ -1,0 +1,316 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+Sinhala:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #059669;
+  --primary-hover: #047857;
+  --primary-light: #d1fae5;
+  --secondary-color: #0f172a;
+  --accent-color: #3b82f6;
+  --bg-main: #f1f5f9;
+  --card-bg: #ffffff;
+  --border-color: #e2e8f0;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --pos-panel: #ffffff;
+  --pos-header: #064e3b;
+  --pos-accent: #10b981;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', 'Noto Sans Sinhala', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Glassmorphism & Header */
+.app-header {
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1040;
+}
+
+/* Sidebar */
+.app-sidebar {
+  width: 260px;
+  min-height: calc(100vh - 60px);
+  background: #0f172a;
+  border-right: 1px solid #1e293b;
+  color: #cbd5e1;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  color: #94a3b8;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 8px;
+  margin: 4px 12px;
+  transition: all 0.2s ease;
+}
+
+.sidebar-link:hover, .sidebar-link.active {
+  color: #ffffff;
+  background: rgba(16, 185, 129, 0.15);
+  border-left: 4px solid var(--primary-color);
+}
+
+.sidebar-link i {
+  font-size: 1.15rem;
+}
+
+/* POS Terminal High-Performance Layout */
+.pos-container {
+  height: calc(100vh - 65px);
+  display: flex;
+  overflow: hidden;
+  background: #f8fafc;
+}
+
+.pos-cart-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-right: 1px solid #e2e8f0;
+  height: 100%;
+}
+
+.pos-catalog-panel {
+  width: 480px;
+  display: flex;
+  flex-direction: column;
+  background: #f1f5f9;
+  height: 100%;
+  border-left: 1px solid #e2e8f0;
+}
+
+@media (max-width: 992px) {
+  .pos-catalog-panel {
+    display: none;
+  }
+}
+
+.pos-scanner-input {
+  font-size: 1.25rem;
+  font-weight: 600;
+  border: 2px solid #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+  border-radius: 10px;
+  padding: 12px 16px;
+  letter-spacing: 0.5px;
+}
+
+.pos-cart-table-wrap {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.pos-cart-table {
+  margin-bottom: 0;
+  font-size: 0.95rem;
+}
+
+.pos-cart-table th {
+  background: #f8fafc;
+  font-weight: 700;
+  color: #475569;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  padding: 10px 14px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.pos-cart-table td {
+  padding: 12px 14px;
+  vertical-align: middle;
+}
+
+.pos-cart-row {
+  transition: background-color 0.15s ease;
+}
+
+.pos-cart-row:hover {
+  background-color: #f0fdf4;
+}
+
+.pos-summary-box {
+  background: #0f172a;
+  color: white;
+  padding: 18px 24px;
+  border-top: 2px solid #10b981;
+}
+
+.pos-total-display {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #10b981;
+  text-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
+}
+
+/* POS Category Tabs & Pills */
+.category-scroll-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 #f8fafc;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
+.category-scroll-container::-webkit-scrollbar {
+  height: 5px;
+}
+
+.category-scroll-container::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 4px;
+}
+
+.category-scroll-container::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.category-scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.category-pill-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 38px !important;
+  padding: 0 16px !important;
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+  line-height: 1 !important;
+  border-radius: 8px !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  transition: all 0.15s ease-in-out;
+}
+
+.quick-product-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 12px;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 105px;
+}
+
+.quick-product-card:hover {
+  transform: translateY(-2px);
+  border-color: #10b981;
+  box-shadow: 0 8px 16px -4px rgba(16, 185, 129, 0.15);
+}
+
+/* Modern Card & Stat */
+.stat-card {
+  border-radius: 12px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.08);
+}
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+/* Thermal Receipt Printable Styling */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #thermal-receipt-printable, #thermal-receipt-printable * {
+    visibility: visible;
+  }
+  #thermal-receipt-printable {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80mm !important;
+    padding: 2mm !important;
+    margin: 0 !important;
+    font-family: 'Courier New', Courier, monospace !important;
+    font-size: 11px !important;
+    line-height: 1.25 !important;
+    color: #000000 !important;
+    background: #ffffff !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+.receipt-view {
+  width: 320px;
+  margin: 0 auto;
+  background: white;
+  padding: 18px 14px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 12px;
+  line-height: 1.35;
+  border: 1px dashed #cbd5e1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.receipt-view svg,
+#thermal-receipt-printable svg,
+.receipt-barcode-wrapper svg {
+  max-width: 100% !important;
+  width: 100% !important;
+  height: 52px !important;
+  display: block;
+  margin: 6px auto;
+  object-fit: contain;
+}
+
+.receipt-divider {
+  border-top: 1px dashed #475569;
+  margin: 8px 0;
+}
+
+.badge-weight {
+  background-color: #ecfdf5;
+  color: #059669;
+  border: 1px solid #a7f3d0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+}

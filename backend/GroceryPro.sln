@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7E5D3F48-95E0-42E2-96C8-DBE7C1211E51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroceryPro.Domain", "src\GroceryPro.Domain\GroceryPro.Domain.csproj", "{E495A843-932B-4579-8432-E04B873FEB30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroceryPro.Application", "src\GroceryPro.Application\GroceryPro.Application.csproj", "{E2658C1A-553C-4382-A4D3-D5DB9B130B91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroceryPro.Infrastructure", "src\GroceryPro.Infrastructure\GroceryPro.Infrastructure.csproj", "{70BE2EE8-BFE9-449D-85DE-E996652D6B99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroceryPro.API", "src\GroceryPro.API\GroceryPro.API.csproj", "{CFACFC72-2409-476E-B715-1787F587B0A4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{76EE48A2-3D54-4F67-8FF0-199AB70FA878}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroceryPro.Tests", "tests\GroceryPro.Tests\GroceryPro.Tests.csproj", "{2CD8E39D-A73F-4DB2-81D7-C64F981BCF2F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E495A843-932B-4579-8432-E04B873FEB30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E495A843-932B-4579-8432-E04B873FEB30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E495A843-932B-4579-8432-E04B873FEB30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E495A843-932B-4579-8432-E04B873FEB30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2658C1A-553C-4382-A4D3-D5DB9B130B91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2658C1A-553C-4382-A4D3-D5DB9B130B91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2658C1A-553C-4382-A4D3-D5DB9B130B91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2658C1A-553C-4382-A4D3-D5DB9B130B91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70BE2EE8-BFE9-449D-85DE-E996652D6B99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70BE2EE8-BFE9-449D-85DE-E996652D6B99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70BE2EE8-BFE9-449D-85DE-E996652D6B99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70BE2EE8-BFE9-449D-85DE-E996652D6B99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFACFC72-2409-476E-B715-1787F587B0A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFACFC72-2409-476E-B715-1787F587B0A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFACFC72-2409-476E-B715-1787F587B0A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFACFC72-2409-476E-B715-1787F587B0A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CD8E39D-A73F-4DB2-81D7-C64F981BCF2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CD8E39D-A73F-4DB2-81D7-C64F981BCF2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CD8E39D-A73F-4DB2-81D7-C64F981BCF2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CD8E39D-A73F-4DB2-81D7-C64F981BCF2F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E495A843-932B-4579-8432-E04B873FEB30} = {7E5D3F48-95E0-42E2-96C8-DBE7C1211E51}
+		{E2658C1A-553C-4382-A4D3-D5DB9B130B91} = {7E5D3F48-95E0-42E2-96C8-DBE7C1211E51}
+		{70BE2EE8-BFE9-449D-85DE-E996652D6B99} = {7E5D3F48-95E0-42E2-96C8-DBE7C1211E51}
+		{CFACFC72-2409-476E-B715-1787F587B0A4} = {7E5D3F48-95E0-42E2-96C8-DBE7C1211E51}
+		{2CD8E39D-A73F-4DB2-81D7-C64F981BCF2F} = {76EE48A2-3D54-4F67-8FF0-199AB70FA878}
+	EndGlobalSection
+EndGlobal
